@@ -1,0 +1,20 @@
+{%- if exists("publicTypes") %}## Types Documentation
+
+  {%- for child in publicTypes %}{{- render("member_details.tmpl", child) -}}
+  {%- endfor %}
+{% endif -%}
+{%- if exists("publicFunctions") %}## Functions Documentation
+
+  {%- for child in publicFunctions %}{{- render("member_details.tmpl", child) -}}
+  {%- endfor %}
+{% endif -%}
+{%- if exists("publicAttributes") %}## Variables Documentation
+
+  {%- for child in publicAttributes %}{{- render("member_details.tmpl", child) -}}
+  {%- endfor %}
+{% endif -%}
+{%- if exists("defines") %}## Macros Documentation
+
+  {%- for child in defines %}{{- render("member_details.tmpl", child) -}}
+  {%- endfor %}
+{% endif -%}
